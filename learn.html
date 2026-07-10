@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Learning Tools — Uncover</title>
+<meta name="description" content="Myth-vs-fact quizzes, a self-scoring symptom checklist, and reflection polls on reproductive health.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="students.html">For Students</a>
+      <a href="teachers.html">For Teachers</a>
+      <a href="stories.html">Stories</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="resources.html">Resources</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="hero-tag"><span class="pip"></span> Interactive tools</div>
+  <h1>Learning that talks <em>back.</em></h1>
+  <p class="lede">Quizzes, checklists, and quick polls — built to make reproductive health education stick, not just scroll by.</p>
+  <div class="pill-row" style="margin-top:34px;">
+    <a href="#quiz" class="pill">Myth vs. fact quiz</a>
+    <a href="#checklist" class="pill">Symptom checklist</a>
+    <a href="#polls" class="pill">Polls</a>
+    <a href="#media" class="pill">Videos & infographics</a>
+  </div>
+</header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Myth vs. Fact</span><span>Symptom Checklist</span><span>Community Polls</span><span>Explainer Videos</span><span>Infographics</span>
+    <span>Myth vs. Fact</span><span>Symptom Checklist</span><span>Community Polls</span><span>Explainer Videos</span><span>Infographics</span>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<section class="section light" id="quiz">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">01</span>
+        <h2 style="margin-top:14px;">Myth vs. fact.</h2>
+      </div>
+      <p class="lede">Six statements. Tap what you think, then see the explanation.</p>
+    </div>
+    <div class="quiz-card" id="quiz-app" style="max-width:680px; margin:0 auto;"></div>
+  </div>
+</section>
+
+<script>
+  window.QUIZ_DATA = [
+    {
+      statement: "Period pain severe enough to stop you from going to school is just something you have to push through.",
+      options: ["Myth", "Fact"],
+      answer: 0,
+      explanation: "Myth. Pain that disrupts your daily life isn't something to just tolerate — it's worth mentioning to a doctor or nurse."
+    },
+    {
+      statement: "PCOS only affects people who are overweight.",
+      options: ["Myth", "Fact"],
+      answer: 0,
+      explanation: "Myth. PCOS is a hormone condition that affects people across all body types — weight is one possible symptom, not a requirement."
+    },
+    {
+      statement: "Endometriosis can be fully diagnosed with a simple blood test.",
+      options: ["Myth", "Fact"],
+      answer: 0,
+      explanation: "Myth. Diagnosis usually involves a detailed symptom history, imaging, and sometimes a minor surgical procedure — there's no single blood test for it."
+    },
+    {
+      statement: "It's normal for periods to be irregular for the first couple of years after they start.",
+      options: ["Myth", "Fact"],
+      answer: 1,
+      explanation: "Fact. Cycles often take a couple of years to settle into a regular pattern — irregularity alone isn't automatically a red flag at that stage."
+    },
+    {
+      statement: "Fibroids only happen to older adults and never affect teens.",
+      options: ["Myth", "Fact"],
+      answer: 0,
+      explanation: "Myth. Fibroids are less common in teens, but they do happen — which is exactly why they're often missed."
+    },
+    {
+      statement: "Living with ongoing pain or a delayed diagnosis can genuinely affect your mental health, and that's a legitimate reason to ask for support.",
+      options: ["Myth", "Fact"],
+      answer: 1,
+      explanation: "Fact. Chronic pain and dismissal take a real emotional toll — support for that is just as valid as support for the physical symptoms."
+    }
+  ];
+</script>
+
+<!-- CHECKLIST -->
+<section class="section" id="checklist">
+  <div class="wrap two-col">
+    <div>
+      <span class="num">02</span>
+      <h2 style="margin-top:14px;">Symptom awareness checklist.</h2>
+      <p class="lede" style="margin-top:18px;">Check anything that's applied to you in the last few months. You'll get a plain-language read on whether it's worth a conversation — not a diagnosis.</p>
+    </div>
+    <form class="card" id="score-checklist">
+      <div class="checklist">
+        <label class="check-row"><input type="checkbox"> Pain that stops you from going to school or activities</label>
+        <label class="check-row"><input type="checkbox"> Periods lasting longer than 7 days</label>
+        <label class="check-row"><input type="checkbox"> Soaking a pad or tampon every hour for several hours</label>
+        <label class="check-row"><input type="checkbox"> No period for 3+ months (and not pregnant)</label>
+        <label class="check-row"><input type="checkbox"> Bleeding between periods</label>
+        <label class="check-row"><input type="checkbox"> New or worsening acne, hair growth, or weight changes</label>
+        <label class="check-row"><input type="checkbox"> Pain during daily activities, not just around your period</label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top:24px;">See what this means <span class="btn-arrow">→</span></button>
+      <div class="score-result" id="score-result"></div>
+    </form>
+  </div>
+</section>
+
+<!-- POLLS -->
+<section class="section light" id="polls">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">03</span>
+        <h2 style="margin-top:14px;">Quick polls & reflection.</h2>
+      </div>
+      <p class="lede">Cast a vote and see how the room leans. (Results are saved to this device only — this is a prototype, not a live shared poll.)</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card" data-poll="learned" data-seed="[38,52,10]">
+        <h3>Where did you learn the most about your body?</h3>
+        <div style="margin-top:22px;">
+          <div class="poll-option">
+            <div class="poll-label"><span>School health class</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+          <div class="poll-option">
+            <div class="poll-label"><span>Friends or the internet</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+          <div class="poll-option">
+            <div class="poll-label"><span>A parent or family member</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+        </div>
+        <span class="poll-total"></span>
+      </div>
+      <div class="card" data-poll="confidence" data-seed="[21,44,35]">
+        <h3>How confident do you feel telling normal pain from a warning sign?</h3>
+        <div style="margin-top:22px;">
+          <div class="poll-option">
+            <div class="poll-label"><span>Not very confident</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+          <div class="poll-option">
+            <div class="poll-label"><span>Somewhat confident</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+          <div class="poll-option">
+            <div class="poll-label"><span>Very confident</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+        </div>
+        <span class="poll-total"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS & INFOGRAPHICS -->
+<section class="section" id="media">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">04</span>
+        <h2 style="margin-top:14px;">Videos & infographics.</h2>
+      </div>
+      <p class="lede">Placeholder slots for the visual explainers this section will hold — swap these for real video embeds and downloadable infographics as they're produced.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon tint-pink" style="font-size:1.4rem;">▶</div>
+        <h3>"What is Endometriosis?"</h3>
+        <p>2-minute explainer video — coming soon.</p>
+      </div>
+      <div class="card">
+        <div class="icon tint-purple" style="font-size:1.4rem;">▶</div>
+        <h3>"PCOS, in plain English"</h3>
+        <p>2-minute explainer video — coming soon.</p>
+      </div>
+      <div class="card">
+        <div class="icon tint-sky" style="font-size:1.4rem;">▤</div>
+        <h3>Normal vs. not-normal infographic</h3>
+        <p>Printable one-pager for classrooms — coming soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col" style="max-width:280px;">
+        <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+        <p class="muted" style="margin-top:16px; font-size:0.9rem;">A student-built reproductive health education project. Not a substitute for medical advice.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="students.html">For Students</a></li>
+          <li><a href="teachers.html">For Teachers</a></li>
+          <li><a href="learn.html">Interactive Tools</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="stories.html#share">Share your story</a></li>
+          <li><a href="students.html#ask">Ask a question</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="resources.html">Resource directory</a></li>
+          <li><a href="resources.html#help">When to seek help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year></span> Uncover. Built for a healthier, more honest health class.</span>
+      <span>This site does not store or share anything you submit — it's a static prototype.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="exit-btn" data-quick-exit>Quick exit</a>
+
+<script src="js/main.js"></script>
+<script src="js/motion.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/checklist.js"></script>
+<script src="js/polls.js"></script>
+</body>
+</html>
