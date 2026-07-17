@@ -31,6 +31,7 @@
   <div class="pill-row" style="margin-top:34px;">
     <a href="#symptoms" class="pill">Normal vs. not normal</a>
     <a href="#conditions" class="pill">Conditions</a>
+    <a href="#pain-tracker" class="pill">Pain tracker</a>
     <a href="#stories" class="pill">Stories</a>
     <a href="#ask" class="pill">Ask a question</a>
     <a href="#mental-health" class="pill">Mental health</a>
@@ -98,8 +99,8 @@
       <div class="card">
         <div class="icon tint-pink">◆</div>
         <h3>Endometriosis</h3>
-        <p>Tissue similar to the uterine lining grows outside the uterus, causing pain that's often dismissed as "bad cramps." Average time to diagnosis is commonly years, not months.</p>
-        <p class="tag-link" style="margin-top:16px; color:var(--muted); font-weight:500;">Watch for: pain that disrupts your day, pain during or after periods that doesn't ease with rest.</p>
+        <p>Tissue similar to the uterine lining grows outside the uterus, causing inflammation and pain that's often dismissed as "bad cramps" — it can affect more than the reproductive system, including energy, mood, and digestion.</p>
+        <p class="tag-link" style="margin-top:16px; color:var(--muted); font-weight:500;">Watch for: pain that disrupts your day, pain that doesn't ease with rest or OTC medication, symptoms that often start soon after your first period.</p>
       </div>
       <div class="card">
         <div class="icon tint-purple">◆</div>
@@ -114,7 +115,98 @@
         <p class="tag-link" style="margin-top:16px; color:var(--muted); font-weight:500;">Watch for: heavy or prolonged bleeding, pelvic pressure or pain, frequent urination.</p>
       </div>
     </div>
+
+    <div class="stats-row" style="padding:44px 0 8px;">
+      <div>
+        <span class="stat-num">7–10 yrs</span>
+        <p class="stat-label">Average delay to an endometriosis diagnosis</p>
+      </div>
+      <div>
+        <span class="stat-num">1 in 10</span>
+        <p class="stat-label">Will be diagnosed with endometriosis</p>
+      </div>
+      <div>
+        <span class="stat-num">Menarche</span>
+        <p class="stat-label">Symptoms often begin soon after your first period</p>
+      </div>
+    </div>
+    <p class="form-note">Stats: Endometriosis Foundation of America (<a href="https://www.endofound.org" target="_blank" rel="noopener" style="text-decoration:underline;">endofound.org</a>) — estimates vary by source.</p>
+
+    <div class="divider"></div>
+
+    <h3 style="margin-bottom:24px;">Myths that delay diagnosis.</h3>
+    <div class="grid grid-2">
+      <div class="card">
+        <p style="font-weight:600;">"You're just trying to get out of class."</p>
+        <p style="margin-top:10px;">Fatigue and pain genuinely make it hard to concentrate — and for most people with endometriosis, pain doesn't actually improve with over-the-counter medication.</p>
+      </div>
+      <div class="card">
+        <p style="font-weight:600;">"It only affects adults, not teens."</p>
+        <p style="margin-top:10px;">Symptoms typically begin in adolescence, often right after a first period, and can worsen over time if untreated.</p>
+      </div>
+      <div class="card">
+        <p style="font-weight:600;">"You don't have heavy bleeding, so it can't be endo."</p>
+        <p style="margin-top:10px;">There's no single "required" symptom — the presence of any of these patterns is worth a conversation, not a checklist to fully match.</p>
+      </div>
+      <div class="card">
+        <p style="font-weight:600;">"Pregnancy cures it."</p>
+        <p style="margin-top:10px;">Pregnancy doesn't cure endometriosis — it may temporarily ease symptoms for some, due to hormone changes, but that's not the same as treatment.</p>
+      </div>
+    </div>
+
     <p class="form-note" style="margin-top:24px;">This is general education, not medical advice — symptoms vary a lot between people. A doctor is the only one who can diagnose any of these.</p>
+  </div>
+</section>
+
+<!-- PAIN TRACKER -->
+<section class="section" id="pain-tracker">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">03</span>
+        <h2 style="margin-top:14px;">Track your pain, before your appointment.</h2>
+      </div>
+      <p class="lede">Doctors take specifics seriously. Build a quick pain profile here, then copy it into your notes app before your visit — takes about a minute.</p>
+    </div>
+
+    <div class="quiz-card" style="max-width:840px; margin:0 auto;">
+      <h3>Where does it hurt, and when?</h3>
+      <p class="form-note" style="margin:10px 0 20px;">Check any that apply — an area can have more than one.</p>
+      <div style="overflow-x:auto;">
+        <table class="pain-map-table" id="pain-map">
+          <thead>
+            <tr><th>Area</th><th>During period</th><th>Other times</th><th>Constant</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Lower belly / pelvis</td><td><input type="checkbox" data-area="Lower belly/pelvis" data-when="during period"></td><td><input type="checkbox" data-area="Lower belly/pelvis" data-when="other times"></td><td><input type="checkbox" data-area="Lower belly/pelvis" data-when="constant"></td></tr>
+            <tr><td>Lower back</td><td><input type="checkbox" data-area="Lower back" data-when="during period"></td><td><input type="checkbox" data-area="Lower back" data-when="other times"></td><td><input type="checkbox" data-area="Lower back" data-when="constant"></td></tr>
+            <tr><td>Legs or thighs</td><td><input type="checkbox" data-area="Legs/thighs" data-when="during period"></td><td><input type="checkbox" data-area="Legs/thighs" data-when="other times"></td><td><input type="checkbox" data-area="Legs/thighs" data-when="constant"></td></tr>
+            <tr><td>Headaches</td><td><input type="checkbox" data-area="Headaches" data-when="during period"></td><td><input type="checkbox" data-area="Headaches" data-when="other times"></td><td><input type="checkbox" data-area="Headaches" data-when="constant"></td></tr>
+            <tr><td>During bowel movements or urination</td><td><input type="checkbox" data-area="Bowel movements/urination" data-when="during period"></td><td><input type="checkbox" data-area="Bowel movements/urination" data-when="other times"></td><td><input type="checkbox" data-area="Bowel movements/urination" data-when="constant"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:32px;">How's it affecting your day?</h3>
+      <div class="checklist" id="pain-impact" style="margin-top:16px;">
+        <label class="check-row"><input type="checkbox" value="Missed school or activities"> Missed school or activities</label>
+        <label class="check-row"><input type="checkbox" value="Trouble concentrating or sleeping"> Trouble concentrating or sleeping</label>
+        <label class="check-row"><input type="checkbox" value="Needed to leave class or an event early"> Needed to leave class or an event early</label>
+        <label class="check-row"><input type="checkbox" value="Nausea, vomiting, or dizziness alongside the pain"> Nausea, vomiting, or dizziness alongside the pain</label>
+      </div>
+
+      <h3 style="margin-top:32px;">What helps, even a little?</h3>
+      <div class="checklist" id="pain-relief" style="margin-top:16px;">
+        <label class="check-row"><input type="checkbox" value="Heat (heating pad, warm bath)"> Heat (heating pad, warm bath)</label>
+        <label class="check-row"><input type="checkbox" value="Rest"> Rest</label>
+        <label class="check-row"><input type="checkbox" value="Over-the-counter pain medication"> Over-the-counter pain medication</label>
+        <label class="check-row"><input type="checkbox" value="Nothing has really helped yet"> Nothing has really helped yet</label>
+      </div>
+
+      <button class="btn btn-primary" id="pain-generate" style="margin-top:28px;">Build my summary <span class="btn-arrow">→</span></button>
+      <div class="score-result" id="pain-summary"></div>
+    </div>
+    <p class="form-note" style="text-align:center; margin-top:20px;">Nothing here is saved or sent anywhere — it only exists in this page until you close it. Format inspired by symptom-tracking guidance from the <a href="https://www.endofound.org" target="_blank" rel="noopener" style="text-decoration:underline;">Endometriosis Foundation of America</a>.</p>
   </div>
 </section>
 
@@ -123,7 +215,7 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="num">03</span>
+        <span class="num">04</span>
         <h2 style="margin-top:14px;">You're not the only one.</h2>
       </div>
       <a href="stories.html" class="btn btn-outline">Read all stories <span class="btn-arrow">→</span></a>
@@ -145,7 +237,7 @@
 <section class="section" id="ask">
   <div class="wrap two-col">
     <div>
-      <span class="num">04</span>
+      <span class="num">05</span>
       <h2 style="margin-top:14px;">Ask, anonymously.</h2>
       <p class="lede" style="margin-top:18px;">No names, no accounts. Submit a question you'd never ask out loud — we'll use real (anonymized) questions to build out the resources on this site.</p>
       <div class="anon-note">
@@ -180,7 +272,7 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="num">05</span>
+        <span class="num">06</span>
         <h2 style="margin-top:14px;">Chronic pain affects more than your body.</h2>
       </div>
       <p class="lede">Living with unexplained pain, or waiting years for a diagnosis, takes a toll. That's real — and support for it matters too.</p>
@@ -202,6 +294,17 @@
         <p>A school counselor, nurse, trusted teacher, or older sibling — pick one person to loop in so you're not carrying this alone.</p>
       </div>
     </div>
+
+    <h3 style="margin-top:44px; margin-bottom:18px;">Strategies people use to cope, day to day</h3>
+    <ul class="pill-row">
+      <li class="pill">Heat therapy</li>
+      <li class="pill">Anti-inflammatory eating</li>
+      <li class="pill">Stress reduction (meditation, journaling)</li>
+      <li class="pill">TENS (electrical stimulation)</li>
+      <li class="pill">Pelvic floor physical therapy</li>
+      <li class="pill">Counseling or peer support</li>
+    </ul>
+
     <a href="resources.html#help" class="btn btn-dark" style="margin-top:36px;">See mental health resources <span class="btn-arrow">→</span></a>
   </div>
 </section>
@@ -211,7 +314,7 @@
   <div class="wrap">
     <div class="banner">
       <div>
-        <span class="num" style="color:rgba(255,255,255,0.8);">06</span>
+        <span class="num" style="color:rgba(255,255,255,0.8);">07</span>
         <h2 style="margin-top:14px; color:#fff;">Test what you know — myth vs. fact.</h2>
         <p style="color:rgba(255,255,255,0.85); margin-top:10px; max-width:480px;">Quizzes, symptom checklists, and quick polls, built for actually learning something.</p>
       </div>
@@ -225,7 +328,7 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="num">07</span>
+        <span class="num">08</span>
         <h2 style="margin-top:14px;">How to actually get help.</h2>
       </div>
     </div>
@@ -292,5 +395,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/motion.js"></script>
+<script src="js/paintracker.js"></script>
 </body>
 </html>
