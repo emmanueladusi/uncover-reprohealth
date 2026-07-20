@@ -14,8 +14,9 @@
     <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="students.html">For Students</a>
-      <a href="teachers.html" class="active">For Teachers</a>
+      <a href="students.html">Students</a>
+      <a href="teachers.html" class="active">Teachers</a>
+      <a href="parents.html">Parents</a>
       <a href="stories.html">Stories</a>
       <a href="learn.html">Learn</a>
       <a href="resources.html">Resources</a>
@@ -23,6 +24,7 @@
     <button class="nav-toggle" aria-label="Toggle menu">☰</button>
   </div>
 </nav>
+<div class="ombre-bar"></div>
 
 <header class="hero wrap">
   <div class="hero-tag"><span class="pip"></span> For teachers & educators</div>
@@ -54,25 +56,19 @@
         <span class="num">01</span>
         <h2 style="margin-top:14px;">Training modules.</h2>
       </div>
-      <p class="lede">Short, self-paced modules to build baseline confidence before you're in front of a classroom.</p>
+      <p class="lede">Eight short, self-paced modules to build baseline confidence before you're in front of a classroom. Work through them in order, or jump to what you need.</p>
     </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="icon tint-sky">01</div>
-        <h3>The basics, refreshed</h3>
-        <p>A plain-language refresher on menstrual health, common conditions, and the vocabulary students are already using.</p>
-      </div>
-      <div class="card">
-        <div class="icon tint-pink">02</div>
-        <h3>Answering hard questions</h3>
-        <p>Scripts and frameworks for responding to unexpected questions without shutting the conversation down.</p>
-      </div>
-      <div class="card">
-        <div class="icon tint-purple">03</div>
-        <h3>Knowing your limits</h3>
-        <p>Where teaching ends and referral begins — how to point a student toward a nurse, counselor, or doctor appropriately.</p>
-      </div>
+    <div class="grid grid-4">
+      <div class="card"><div class="icon tint-sky">1</div><h3>Introduction</h3><p>Why reproductive health education matters, and what this course covers.</p></div>
+      <div class="card"><div class="icon tint-pink">2</div><h3>Reproductive Health</h3><p>A plain-language refresher on the menstrual cycle and vocabulary students are already using.</p></div>
+      <div class="card"><div class="icon tint-purple">3</div><h3>Common Conditions</h3><p>Endometriosis, PMOS, fibroids, adenomyosis, and PMDD, explained.</p></div>
+      <div class="card"><div class="icon tint-orange">4</div><h3>Know the Signs</h3><p>Recognizing symptoms students may experience, and patterns worth a quiet check-in.</p></div>
+      <div class="card"><div class="icon tint-lime">5</div><h3>Healthcare Inequities</h3><p>How race, gender, and age bias affect whose pain gets believed.</p></div>
+      <div class="card"><div class="icon tint-purple">6</div><h3>Supporting Students</h3><p>Classroom accommodations and how to respond when a student discloses something personal.</p></div>
+      <div class="card"><div class="icon tint-sky">7</div><h3>Inclusive Classrooms</h3><p>Anti-racist, age-aware, and culturally responsive discussion practices.</p></div>
+      <div class="card"><div class="icon tint-pink">8</div><h3>Assessment</h3><p>A short self-check to confirm the essentials before you're in front of a class.</p></div>
     </div>
+    <p class="form-note" style="margin-top:24px;">In a future version, completing all 8 modules unlocks a downloadable certificate — this prototype doesn't track progress across visits.</p>
   </div>
 </section>
 
@@ -225,7 +221,7 @@
         <h3>High school</h3>
         <p style="margin-bottom:18px;">Deeper dives into specific conditions, healthcare self-advocacy, and the systemic gaps in reproductive healthcare.</p>
         <ul class="pill-row">
-          <li class="pill">Endometriosis, PCOS & fibroids</li>
+          <li class="pill">Endometriosis, PMOS, fibroids, adenomyosis & PMDD</li>
           <li class="pill">Advocating for yourself at the doctor</li>
           <li class="pill">Healthcare equity & bias</li>
         </ul>
@@ -271,9 +267,10 @@
       <div class="foot-col">
         <h4>Learn</h4>
         <ul>
-          <li><a href="students.html">For Students</a></li>
-          <li><a href="teachers.html">For Teachers</a></li>
+          <li><a href="students.html">Student Hub</a></li>
+          <li><a href="teachers.html">Teacher Hub</a></li>
           <li><a href="learn.html">Interactive Tools</a></li>
+          <li><a href="advocacy.html">Self-Advocacy</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -282,6 +279,7 @@
           <li><a href="stories.html">Stories</a></li>
           <li><a href="stories.html#share">Share your story</a></li>
           <li><a href="students.html#ask">Ask a question</a></li>
+          <li><a href="parents.html">Parent & Supporters</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -289,12 +287,13 @@
         <ul>
           <li><a href="resources.html">Resource directory</a></li>
           <li><a href="resources.html#help">When to seek help</a></li>
+          <li><a href="research.html">Research & about</a></li>
         </ul>
       </div>
     </div>
-    <div class="foot-bottom">
+    <div class="foot-bottom" style="flex-direction:column; align-items:flex-start; gap:10px;">
       <span>© <span data-year></span> Uncover. Built for a healthier, more honest health class.</span>
-      <span>This site does not store or share anything you submit — it's a static prototype.</span>
+      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional.</span>
     </div>
   </div>
 </footer>

@@ -14,8 +14,9 @@
     <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="students.html">For Students</a>
-      <a href="teachers.html">For Teachers</a>
+      <a href="students.html">Students</a>
+      <a href="teachers.html">Teachers</a>
+      <a href="parents.html">Parents</a>
       <a href="stories.html">Stories</a>
       <a href="learn.html" class="active">Learn</a>
       <a href="resources.html">Resources</a>
@@ -23,6 +24,7 @@
     <button class="nav-toggle" aria-label="Toggle menu">☰</button>
   </div>
 </nav>
+<div class="ombre-bar"></div>
 
 <header class="hero wrap">
   <div class="hero-tag"><span class="pip"></span> Interactive tools</div>
@@ -31,15 +33,16 @@
   <div class="pill-row" style="margin-top:34px;">
     <a href="#quiz" class="pill">Myth vs. fact quiz</a>
     <a href="#checklist" class="pill">Symptom checklist</a>
-    <a href="#polls" class="pill">Polls</a>
+    <a href="#polls" class="pill">Polls & reflection</a>
+    <a href="#game" class="pill">Match the symptom</a>
     <a href="#media" class="pill">Videos & infographics</a>
   </div>
 </header>
 
 <div class="marquee">
   <div class="marquee-track">
-    <span>Myth vs. Fact</span><span>Symptom Checklist</span><span>Community Polls</span><span>Explainer Videos</span><span>Infographics</span>
-    <span>Myth vs. Fact</span><span>Symptom Checklist</span><span>Community Polls</span><span>Explainer Videos</span><span>Infographics</span>
+    <span>Myth vs. Fact</span><span>Symptom Checklist</span><span>Reflection</span><span>Community Polls</span><span>Match the Symptom</span><span>Explainer Videos</span><span>Infographics</span>
+    <span>Myth vs. Fact</span><span>Symptom Checklist</span><span>Reflection</span><span>Community Polls</span><span>Match the Symptom</span><span>Explainer Videos</span><span>Infographics</span>
   </div>
 </div>
 
@@ -51,7 +54,7 @@
         <span class="num">01</span>
         <h2 style="margin-top:14px;">Myth vs. fact.</h2>
       </div>
-      <p class="lede">Eight statements. Tap what you think, then see the explanation.</p>
+      <p class="lede">Eight statements from our student research survey. Tap what you think, then see the explanation.</p>
     </div>
     <div class="quiz-card" id="quiz-app" style="max-width:680px; margin:0 auto;"></div>
   </div>
@@ -60,52 +63,52 @@
 <script>
   window.QUIZ_DATA = [
     {
-      statement: "Period pain severe enough to stop you from going to school is just something you have to push through.",
+      statement: "Severe period pain that makes you miss school is normal.",
       options: ["Myth", "Fact"],
       answer: 0,
       explanation: "Myth. Pain that disrupts your daily life isn't something to just tolerate — it's worth mentioning to a doctor or nurse."
     },
     {
-      statement: "PCOS only affects people who are overweight.",
-      options: ["Myth", "Fact"],
-      answer: 0,
-      explanation: "Myth. PCOS is a hormone condition that affects people across all body types — weight is one possible symptom, not a requirement."
-    },
-    {
-      statement: "Endometriosis can be fully diagnosed with a simple blood test.",
-      options: ["Myth", "Fact"],
-      answer: 0,
-      explanation: "Myth. Diagnosis usually involves a detailed symptom history, imaging, and sometimes a minor surgical procedure — there's no single blood test for it."
-    },
-    {
-      statement: "It's normal for periods to be irregular for the first couple of years after they start.",
+      statement: "Teenagers can develop endometriosis.",
       options: ["Myth", "Fact"],
       answer: 1,
-      explanation: "Fact. Cycles often take a couple of years to settle into a regular pattern — irregularity alone isn't automatically a red flag at that stage."
+      explanation: "Fact. Symptoms often begin in adolescence, sometimes soon after a first period."
     },
     {
-      statement: "Fibroids only happen to older adults and never affect teens.",
+      statement: "PMOS only affects fertility.",
       options: ["Myth", "Fact"],
       answer: 0,
-      explanation: "Myth. Fibroids are less common in teens, but they do happen — which is exactly why they're often missed."
+      explanation: "Myth. PMOS (formerly known as PCOS) can also affect hormones, weight, skin, insulin resistance, and mental health."
     },
     {
-      statement: "For a doctor to consider endometriosis, you need to have every single symptom on the list.",
+      statement: "Fibroids are cancerous tumors.",
       options: ["Myth", "Fact"],
       answer: 0,
-      explanation: "Myth. There's no one 'required' symptom — the presence of any of the common patterns (pain, heavy bleeding, digestive issues, fatigue) is worth raising with a doctor."
+      explanation: "Myth. They are non-cancerous growths."
     },
     {
-      statement: "If over-the-counter pain medication doesn't fix your period pain, that's a sign it's worth a doctor's visit.",
+      statement: "Not everyone with endometriosis has the same symptoms.",
       options: ["Myth", "Fact"],
       answer: 1,
-      explanation: "Fact. For many people with endometriosis, pain doesn't actually improve with OTC medication — that non-response is itself a useful piece of information for a doctor."
+      explanation: "Fact. Endometriosis looks different for different people — there's no single required symptom."
     },
     {
-      statement: "Living with ongoing pain or a delayed diagnosis can genuinely affect your mental health, and that's a legitimate reason to ask for support.",
+      statement: "Heavy bleeding that lasts more than seven days should be discussed with a healthcare provider.",
       options: ["Myth", "Fact"],
       answer: 1,
-      explanation: "Fact. Chronic pain and dismissal take a real emotional toll — support for that is just as valid as support for the physical symptoms."
+      explanation: "Fact. Period bleeding lasting longer than seven days is a sign worth bringing to a doctor."
+    },
+    {
+      statement: "Only adults get reproductive health conditions.",
+      options: ["Myth", "Fact"],
+      answer: 0,
+      explanation: "Myth. Many conditions begin during adolescence."
+    },
+    {
+      statement: "Black and racialized girls are more likely to experience delayed diagnosis because of systemic barriers in healthcare.",
+      options: ["Myth", "Fact"],
+      answer: 1,
+      explanation: "Fact. Research has shown that systemic racism, gender bias, and ageism can contribute to delayed diagnosis and treatment."
     }
   ];
 </script>
@@ -120,13 +123,19 @@
     </div>
     <form class="card" id="score-checklist">
       <div class="checklist">
-        <label class="check-row"><input type="checkbox"> Pain that stops you from going to school or activities</label>
-        <label class="check-row"><input type="checkbox"> Periods lasting longer than 7 days</label>
-        <label class="check-row"><input type="checkbox"> Soaking a pad or tampon every hour for several hours</label>
-        <label class="check-row"><input type="checkbox"> No period for 3+ months (and not pregnant)</label>
-        <label class="check-row"><input type="checkbox"> Bleeding between periods</label>
-        <label class="check-row"><input type="checkbox"> New or worsening acne, hair growth, or weight changes</label>
-        <label class="check-row"><input type="checkbox"> Pain during daily activities, not just around your period</label>
+        <label class="check-row"><input type="checkbox"> Period pain that stops me from attending school</label>
+        <label class="check-row"><input type="checkbox"> Heavy bleeding</label>
+        <label class="check-row"><input type="checkbox"> Bleeding longer than 7 days</label>
+        <label class="check-row"><input type="checkbox"> Irregular or missing periods</label>
+        <label class="check-row"><input type="checkbox"> Pelvic pain between periods</label>
+        <label class="check-row"><input type="checkbox"> Pain during bowel movements</label>
+        <label class="check-row"><input type="checkbox"> Pain during urination during my period</label>
+        <label class="check-row"><input type="checkbox"> Acne that won't improve</label>
+        <label class="check-row"><input type="checkbox"> Excess facial or body hair</label>
+        <label class="check-row"><input type="checkbox"> Hair thinning</label>
+        <label class="check-row"><input type="checkbox"> Difficulty losing weight</label>
+        <label class="check-row"><input type="checkbox"> Constant fatigue</label>
+        <label class="check-row"><input type="checkbox"> Anxiety or low mood related to symptoms</label>
       </div>
       <button type="submit" class="btn btn-primary" style="margin-top:24px;">See what this means <span class="btn-arrow">→</span></button>
       <div class="score-result" id="score-result"></div>
@@ -134,53 +143,93 @@
   </div>
 </section>
 
+<!-- REFLECTION -->
+<section class="section light">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Reflection questions</span>
+        <h2 style="margin-top:14px;">Sit with these for a minute.</h2>
+      </div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><p>Before today, what did you know about endometriosis, PMOS, or fibroids?</p></div>
+      <div class="card"><p>What surprised you most?</p></div>
+      <div class="card"><p>Why do you think reproductive illnesses are often overlooked?</p></div>
+      <div class="card"><p>How can schools better support students experiencing chronic reproductive pain?</p></div>
+      <div class="card" style="grid-column:1/-1;"><p>Why is it important to listen to people's experiences with pain instead of dismissing them?</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- POLLS -->
-<section class="section light" id="polls">
+<section class="section" id="polls">
   <div class="wrap">
     <div class="section-head">
       <div>
         <span class="num">03</span>
-        <h2 style="margin-top:14px;">Quick polls & reflection.</h2>
+        <h2 style="margin-top:14px;">Quick polls.</h2>
       </div>
       <p class="lede">Cast a vote and see how the room leans. (Results are saved to this device only — this is a prototype, not a live shared poll.)</p>
     </div>
-    <div class="grid grid-2">
-      <div class="card" data-poll="learned" data-seed="[38,52,10]">
-        <h3>Where did you learn the most about your body?</h3>
+    <div class="grid grid-3">
+      <div class="card" data-poll="heard" data-seed="[61,39]">
+        <h3>Before today, had you heard of endometriosis?</h3>
         <div style="margin-top:22px;">
           <div class="poll-option">
-            <div class="poll-label"><span>School health class</span><span class="poll-pct">0%</span></div>
+            <div class="poll-label"><span>Yes</span><span class="poll-pct">0%</span></div>
             <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
             <button class="btn poll-vote">Vote</button>
           </div>
           <div class="poll-option">
-            <div class="poll-label"><span>Friends or the internet</span><span class="poll-pct">0%</span></div>
-            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
-            <button class="btn poll-vote">Vote</button>
-          </div>
-          <div class="poll-option">
-            <div class="poll-label"><span>A parent or family member</span><span class="poll-pct">0%</span></div>
+            <div class="poll-label"><span>No</span><span class="poll-pct">0%</span></div>
             <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
             <button class="btn poll-vote">Vote</button>
           </div>
         </div>
         <span class="poll-total"></span>
       </div>
-      <div class="card" data-poll="confidence" data-seed="[21,44,35]">
-        <h3>How confident do you feel telling normal pain from a warning sign?</h3>
+      <div class="card" data-poll="teach-more" data-seed="[71,8,21]">
+        <h3>Should schools teach more about reproductive health?</h3>
         <div style="margin-top:22px;">
           <div class="poll-option">
-            <div class="poll-label"><span>Not very confident</span><span class="poll-pct">0%</span></div>
+            <div class="poll-label"><span>Yes</span><span class="poll-pct">0%</span></div>
             <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
             <button class="btn poll-vote">Vote</button>
           </div>
           <div class="poll-option">
-            <div class="poll-label"><span>Somewhat confident</span><span class="poll-pct">0%</span></div>
+            <div class="poll-label"><span>No</span><span class="poll-pct">0%</span></div>
             <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
             <button class="btn poll-vote">Vote</button>
           </div>
           <div class="poll-option">
-            <div class="poll-label"><span>Very confident</span><span class="poll-pct">0%</span></div>
+            <div class="poll-label"><span>Not sure</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+        </div>
+        <span class="poll-total"></span>
+      </div>
+      <div class="card" data-poll="confidence" data-seed="[21,35,28,16]">
+        <h3>How comfortable would you feel talking to a teacher or provider about severe period pain?</h3>
+        <div style="margin-top:22px;">
+          <div class="poll-option">
+            <div class="poll-label"><span>Very comfortable</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+          <div class="poll-option">
+            <div class="poll-label"><span>Somewhat comfortable</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+          <div class="poll-option">
+            <div class="poll-label"><span>Not very comfortable</span><span class="poll-pct">0%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
+            <button class="btn poll-vote">Vote</button>
+          </div>
+          <div class="poll-option">
+            <div class="poll-label"><span>Not comfortable at all</span><span class="poll-pct">0%</span></div>
             <div class="poll-bar-track"><div class="poll-bar-fill"></div></div>
             <button class="btn poll-vote">Vote</button>
           </div>
@@ -188,6 +237,20 @@
         <span class="poll-total"></span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MATCH THE SYMPTOM GAME -->
+<section class="section light" id="game">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">04</span>
+        <h2 style="margin-top:14px;">Match the symptom.</h2>
+      </div>
+      <p class="lede">Click a symptom, then click the condition it belongs to. This is one game from the full library planned for this page — crosswords, word searches, and a memory game are coming as the project grows.</p>
+    </div>
+    <div class="quiz-card" id="match-game" style="max-width:760px; margin:0 auto;"></div>
   </div>
 </section>
 
@@ -196,7 +259,7 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="num">04</span>
+        <span class="num">05</span>
         <h2 style="margin-top:14px;">Videos & infographics.</h2>
       </div>
       <p class="lede">Placeholder slots for the visual explainers this section will hold — swap these for real video embeds and downloadable infographics as they're produced.</p>
@@ -209,7 +272,7 @@
       </div>
       <div class="card">
         <div class="icon tint-purple" style="font-size:1.4rem;">▶</div>
-        <h3>"PCOS, in plain English"</h3>
+        <h3>"PMOS, in plain English"</h3>
         <p>2-minute explainer video — coming soon.</p>
       </div>
       <div class="card">
@@ -231,9 +294,10 @@
       <div class="foot-col">
         <h4>Learn</h4>
         <ul>
-          <li><a href="students.html">For Students</a></li>
-          <li><a href="teachers.html">For Teachers</a></li>
+          <li><a href="students.html">Student Hub</a></li>
+          <li><a href="teachers.html">Teacher Hub</a></li>
           <li><a href="learn.html">Interactive Tools</a></li>
+          <li><a href="advocacy.html">Self-Advocacy</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -242,6 +306,7 @@
           <li><a href="stories.html">Stories</a></li>
           <li><a href="stories.html#share">Share your story</a></li>
           <li><a href="students.html#ask">Ask a question</a></li>
+          <li><a href="parents.html">Parent & Supporters</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -249,12 +314,13 @@
         <ul>
           <li><a href="resources.html">Resource directory</a></li>
           <li><a href="resources.html#help">When to seek help</a></li>
+          <li><a href="research.html">Research & about</a></li>
         </ul>
       </div>
     </div>
-    <div class="foot-bottom">
+    <div class="foot-bottom" style="flex-direction:column; align-items:flex-start; gap:10px;">
       <span>© <span data-year></span> Uncover. Built for a healthier, more honest health class.</span>
-      <span>This site does not store or share anything you submit — it's a static prototype.</span>
+      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional.</span>
     </div>
   </div>
 </footer>
@@ -266,5 +332,6 @@
 <script src="js/quiz.js"></script>
 <script src="js/checklist.js"></script>
 <script src="js/polls.js"></script>
+<script src="js/matchgame.js"></script>
 </body>
 </html>

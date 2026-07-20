@@ -7,27 +7,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
 
 :root{
-  --bg:            #1D1A39;
+  /* ---- Uncover palette (per project design spec) ---- */
+  --bg:            #1D1A39;  /* Midnight Plum — dark contexts: nav, footer, hero */
   --bg-soft:       #2B2452;
   --bg-softer:     #3B2E63;
-  --paper:         #E8BCB9;
-  --paper-dim:     #DDA9A7;
-  --ink:           #1D1A39;
-  --ink-soft:      #51406A;
+  --canvas:        #FBF6F3;  /* near-white warm base — default light-section bg */
+  --paper:         #E8BCB9;  /* Soft Blush — card / form / activity bg */
+  --paper-dim:     #F3D9D6;  /* lighter blush — secondary card / pill bg */
+  --ink:           #1D1A39;  /* Midnight Plum — headings & body text on light bg */
+  --ink-soft:      #6B5A78;  /* muted plum — secondary text on light bg */
   --white:         #FBF3EF;
 
-  --lime:          #F39F5A;
-  --lime-ink:      #1D1A39;
-  --pink:          #AE445A;
-  --pink-soft:     #E8BCB9;
-  --orange:        #F39F5A;
-  --sky:           #B084C4;
-  --purple:        #7A4A94;
+  --primary:       #451952;  /* Royal Purple — buttons, links, headings, progress bars */
+  --primary-dark:  #351140;
+  --accent2:       #662549;  /* Berry Purple — stories, quotes, testimonials, community */
+  --highlight:     #AE445A;  /* Rose Mauve — callouts, stats, parent hub */
+  --cta:           #F39F5A;  /* Golden Apricot — quiz scores, badges, used sparingly */
+  --cta-ink:       #1D1A39;
+
+  /* legacy aliases (existing markup references these class/var names) */
+  --lime:          var(--cta);
+  --lime-ink:      var(--cta-ink);
+  --pink:          var(--highlight);
+  --pink-soft:     var(--paper-dim);
+  --orange:        var(--accent2);
+  --sky:           #8B5AA6;  /* lightened Royal Purple, for tint variety */
+  --purple:        var(--primary);
   --purple-soft:   #E3D3EC;
 
-  --muted:         #B7A7C7;
-  --line:          rgba(232,188,185,0.16);
-  --line-dark:     rgba(29,26,57,0.14);
+  --muted:         #C9B9D6;
+  --line:          rgba(232,188,185,0.35);
+  --line-dark:     rgba(69,25,82,0.16);
 
   --font-display:  'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
   --font-body:     'Archivo', 'Helvetica Neue', Arial, sans-serif;
@@ -87,11 +97,11 @@ p{ margin:0; }
 section{ position:relative; }
 .section{ padding:110px 0; border-top:1px solid var(--line); }
 .section.light{
-  background:var(--paper);
+  background:var(--canvas);
   color:var(--ink);
   border-top:1px solid var(--line-dark);
 }
-.section.light .eyebrow{ color:var(--pink); }
+.section.light .eyebrow{ color:var(--primary); }
 .section.light .muted{ color:var(--ink-soft); }
 .muted{ color:var(--muted); }
 
@@ -172,12 +182,14 @@ section{ position:relative; }
   white-space:nowrap;
 }
 .btn:hover{ transform:translateY(-2px); }
-.btn-primary{ background:var(--lime); color:var(--lime-ink); }
-.btn-primary:hover{ background:#FFB980; }
+.btn-primary{ background:linear-gradient(135deg, var(--primary), var(--accent2)); color:var(--white); }
+.btn-primary:hover{ background:linear-gradient(135deg, var(--accent2), var(--highlight)); }
 .btn-outline{ border-color:var(--line); color:var(--white); }
 .section.light .btn-outline{ border-color:var(--line-dark); color:var(--ink); }
-.btn-outline:hover{ border-color:var(--lime); }
+.btn-outline:hover{ border-color:var(--primary); }
 .btn-dark{ background:var(--ink); color:var(--paper); }
+.btn-cta{ background:linear-gradient(135deg, var(--cta), #FFC98A); color:var(--cta-ink); }
+.btn-cta:hover{ background:linear-gradient(135deg, #FFC98A, var(--cta)); }
 .btn-arrow{ font-size:1.1em; transition:transform .2s; }
 .btn:hover .btn-arrow{ transform:translateX(3px); }
 
@@ -187,6 +199,9 @@ section{ position:relative; }
 .hero{
   padding:96px 0 90px;
   overflow:hidden;
+  background:
+    radial-gradient(ellipse 900px 500px at 15% 0%, rgba(69,25,82,0.45), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 20%, rgba(174,68,90,0.22), transparent 55%);
 }
 .hero-tag{
   display:inline-flex;
@@ -220,12 +235,12 @@ section{ position:relative; }
   padding:32px;
   transition:border-color .2s, transform .2s;
 }
-.card:hover{ border-color:var(--lime); transform:translateY(-4px); }
+.card:hover{ border-color:var(--cta); transform:translateY(-4px); }
 .section.light .card{
-  background:var(--white);
+  background:var(--paper);
   border-color:var(--line-dark);
 }
-.section.light .card:hover{ border-color:var(--pink); }
+.section.light .card:hover{ border-color:var(--primary); }
 
 .card .icon{
   width:46px; height:46px;
@@ -251,9 +266,9 @@ section{ position:relative; }
 /* icon tint variants */
 .tint-lime{ background:rgba(243,159,90,0.18); color:var(--lime); }
 .tint-pink{ background:rgba(174,68,90,0.20); color:var(--pink); }
-.tint-orange{ background:rgba(243,159,90,0.18); color:var(--orange); }
-.tint-sky{ background:rgba(176,132,196,0.20); color:var(--sky); }
-.tint-purple{ background:rgba(122,74,148,0.24); color:var(--purple); }
+.tint-orange{ background:rgba(102,37,73,0.16); color:var(--orange); }
+.tint-sky{ background:rgba(139,90,166,0.20); color:var(--sky); }
+.tint-purple{ background:rgba(69,25,82,0.16); color:var(--purple); }
 
 /* ---------- pills / tags ---------- */
 .pill{
@@ -412,7 +427,7 @@ footer{
   height:6px; border-radius:99px; background:var(--bg-softer); overflow:hidden; margin-bottom:30px;
 }
 .section.light .quiz-progress{ background:var(--paper-dim); }
-.quiz-progress-bar{ height:100%; background:var(--lime); width:0%; transition:width .3s; }
+.quiz-progress-bar{ height:100%; background:linear-gradient(90deg, var(--primary), var(--highlight), var(--cta)); width:0%; transition:width .3s; }
 .quiz-options{ display:flex; flex-direction:column; gap:12px; margin-top:26px; }
 .quiz-opt{
   text-align:left;
@@ -449,8 +464,14 @@ footer{
 
 /* ---------- misc ---------- */
 .two-col{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center; }
-.divider{ height:1px; background:var(--line); margin:60px 0; }
-.section.light .divider{ background:var(--line-dark); }
+.divider{ height:3px; border-radius:99px; background:linear-gradient(90deg, var(--primary), var(--accent2), var(--highlight), var(--cta)); margin:60px 0; opacity:0.7; }
+.section.light .divider{ opacity:0.55; }
+
+/* full ombré flow, per design spec: Midnight Plum -> Royal Purple -> Berry Purple -> Rose Mauve -> Golden Apricot -> Soft Blush */
+.ombre-bar{
+  height:5px;
+  background:linear-gradient(90deg, var(--bg), var(--primary), var(--accent2), var(--highlight), var(--cta), var(--paper));
+}
 .badge-list{ display:flex; gap:14px; flex-wrap:wrap; margin-top:30px; }
 .badge{ display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--muted); }
 .badge .dot{ width:6px;height:6px;border-radius:50%; background:var(--lime); }
@@ -470,7 +491,7 @@ footer{
 /* poll */
 .poll-bar-track{ background:var(--bg-softer); border-radius:99px; height:34px; position:relative; overflow:hidden; margin-top:10px; }
 .section.light .poll-bar-track{ background:var(--paper-dim); }
-.poll-bar-fill{ height:100%; background:var(--purple); border-radius:99px; width:0%; transition:width .6s ease; display:flex; align-items:center; padding:0 14px; color:#fff; font-size:0.82rem; font-weight:600; white-space:nowrap; }
+.poll-bar-fill{ height:100%; background:linear-gradient(90deg, var(--accent2), var(--highlight)); border-radius:99px; width:0%; transition:width .6s ease; display:flex; align-items:center; padding:0 14px; color:#fff; font-size:0.82rem; font-weight:600; white-space:nowrap; }
 .poll-option{ margin-bottom:18px; }
 .poll-option .poll-label{ display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:2px; }
 .poll-vote{
