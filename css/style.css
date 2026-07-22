@@ -413,7 +413,7 @@ footer{
   position:fixed;
   right:22px;
   bottom:22px;
-  z-index:200;
+  z-index:500;
   background:var(--lime);
   color:var(--lime-ink);
   font-weight:700;
@@ -423,6 +423,44 @@ footer{
   box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 .exit-btn:hover{ background:var(--highlight); }
+
+/* ---------- card modal (click a card to read it full-size) ---------- */
+.modal-overlay{
+  position:fixed; inset:0; z-index:300;
+  background:rgba(61,20,114,0.6);
+  backdrop-filter:blur(4px);
+  display:flex; align-items:center; justify-content:center;
+  padding:24px;
+  opacity:0; pointer-events:none;
+  transition:opacity .25s ease;
+}
+.modal-overlay.open{ opacity:1; pointer-events:auto; }
+.modal-box{
+  background:var(--grad-wellness-soft);
+  color:var(--ink);
+  border-radius:var(--radius);
+  padding:40px;
+  max-width:480px;
+  width:100%;
+  position:relative;
+  transform:translateY(16px) scale(0.98);
+  transition:transform .25s ease;
+  box-shadow:0 30px 70px rgba(20,10,40,0.45);
+}
+.modal-overlay.open .modal-box{ transform:translateY(0) scale(1); }
+.modal-close{
+  position:absolute; top:16px; right:16px;
+  width:36px; height:36px; border-radius:50%;
+  border:1px solid var(--line-dark);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:1.05rem;
+  cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+}
+.modal-box .icon{ margin-bottom:20px; }
+.modal-box h3{ font-size:1.5rem; margin-bottom:14px; }
+.modal-box p{ line-height:1.6; }
 
 /* ---------- form elements ---------- */
 .field{ display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }

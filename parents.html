@@ -32,9 +32,8 @@
   <h1>Supporting someone <em>you love.</em></h1>
   <p class="lede">Whether you're a parent, a partner, a friend, or a sibling — find guidance on supporting a child, sibling, partner, or friend living with reproductive health concerns.</p>
   <div class="pill-row" style="margin-top:34px;">
-    <a href="#parents" class="pill">For parents</a>
+    <a href="#parents" class="pill">Parents & family</a>
     <a href="#partners" class="pill">Partners & friends</a>
-    <a href="#siblings" class="pill">Siblings</a>
   </div>
 </div>
 </header>
@@ -46,15 +45,15 @@
   </div>
 </div>
 
-<!-- PARENTS -->
+<!-- PARENTS & FAMILY -->
 <section class="section light" id="parents">
   <div class="wrap">
     <div class="section-head">
       <div>
         <span class="num">01</span>
-        <h2 style="margin-top:14px;">For parents.</h2>
+        <h2 style="margin-top:14px;">Parents & family.</h2>
       </div>
-      <p class="lede">You don't need medical training — you need to know what to watch for and when to act.</p>
+      <p class="lede">You don't need medical training, you need to know what to watch for and when to act.</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
@@ -85,7 +84,25 @@
       <div class="card">
         <div class="icon tint-purple">🏫</div>
         <h3>School advocacy</h3>
-        <p>You can request flexibility around attendance or PE without disclosing full medical details — a note to the school nurse or counselor is often enough.</p>
+        <p>You can request flexibility around attendance or PE without disclosing full medical details, a note to the school nurse or counselor is often enough.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="two-col">
+      <div>
+        <h3>Supporting siblings</h3>
+        <p class="lede" style="margin-top:14px;">Simple, honest explanations help siblings of any age understand what's going on without oversharing medical details.</p>
+      </div>
+      <div class="card">
+        <h3>How to support a sibling</h3>
+        <ul class="checklist" style="margin-top:18px;">
+          <li class="check-row"><input type="checkbox" id="s1"><label for="s1">Ask them how they're feeling, not just how their sibling is doing</label></li>
+          <li class="check-row"><input type="checkbox" id="s2"><label for="s2">Explain in simple terms: "their body needs extra care sometimes"</label></li>
+          <li class="check-row"><input type="checkbox" id="s3"><label for="s3">Let them help in small, concrete ways if they want to</label></li>
+          <li class="check-row"><input type="checkbox" id="s4"><label for="s4">Reassure them it's okay to still need attention too</label></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -102,48 +119,28 @@
       <p class="lede">Chronic illness is often invisible. Here's how to actually help.</p>
     </div>
     <div class="grid grid-2">
-      <div class="card">
+      <div class="card" data-modal>
         <div class="icon tint-pink">✕</div>
         <h3>Things not to say</h3>
         <p style="margin-top:12px;">"But you don't look sick." "Have you tried just relaxing?" "Is it really that bad?" — these minimize real pain, even when well-intentioned.</p>
       </div>
-      <div class="card">
+      <div class="card" data-modal>
         <div class="icon tint-lime">✓</div>
         <h3>Helpful things to say</h3>
         <p style="margin-top:12px;">"What do you need right now?" "I believe you." "Do you want company, or space?" — offering options beats guessing.</p>
       </div>
-      <div class="card">
+      <div class="card" data-modal>
         <div class="icon tint-purple">🔥</div>
         <h3>Supporting flare-ups</h3>
         <p style="margin-top:12px;">Have a plan ahead of time: who cancels plans, what helps (heat, quiet, medication), and how much check-in they actually want.</p>
       </div>
-      <div class="card">
+      <div class="card" data-modal>
         <div class="icon tint-sky">🩺</div>
         <h3>Helping during appointments</h3>
         <p style="margin-top:12px;">Offer to take notes or ask the follow-up questions they're too exhausted to think of — not to speak over them.</p>
       </div>
     </div>
     <p class="form-note" style="margin-top:24px;">Understanding invisible illnesses: someone can look completely fine and still be in significant pain. Take their word for it.</p>
-  </div>
-</section>
-
-<!-- SIBLINGS -->
-<section class="section light" id="siblings">
-  <div class="wrap two-col">
-    <div>
-      <span class="num">03</span>
-      <h2 style="margin-top:14px;">Siblings.</h2>
-      <p class="lede" style="margin-top:18px;">Simple, honest explanations help siblings (of any age) understand what's going on without oversharing medical details.</p>
-    </div>
-    <div class="card">
-      <h3>How to support a sibling</h3>
-      <ul class="checklist" style="margin-top:18px;">
-        <li class="check-row"><input type="checkbox" id="s1"><label for="s1">Ask them how they're feeling, not just how their sibling is doing</label></li>
-        <li class="check-row"><input type="checkbox" id="s2"><label for="s2">Explain in simple terms: "their body needs extra care sometimes"</label></li>
-        <li class="check-row"><input type="checkbox" id="s3"><label for="s3">Let them help in small, concrete ways if they want to</label></li>
-        <li class="check-row"><input type="checkbox" id="s4"><label for="s4">Reassure them it's okay to still need attention too</label></li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -192,5 +189,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/motion.js"></script>
+<script src="js/cardmodal.js"></script>
 </body>
 </html>

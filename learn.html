@@ -33,10 +33,10 @@
   <p class="lede">Quizzes, checklists, and quick polls — built to make reproductive health education stick, not just scroll by.</p>
   <div class="pill-row" style="margin-top:34px;">
     <a href="#quiz" class="pill">Myth vs. fact quiz</a>
-    <a href="#checklist" class="pill">Symptom checklist</a>
     <a href="#polls" class="pill">Polls & reflection</a>
     <a href="#game" class="pill">Match the symptom</a>
     <a href="#media" class="pill">Videos & infographics</a>
+    <a href="#checklist" class="pill">Symptom checklist</a>
   </div>
 </div>
 </header>
@@ -56,97 +56,171 @@
         <span class="num">01</span>
         <h2 style="margin-top:14px;">Myth vs. fact.</h2>
       </div>
-      <p class="lede">Eight statements from our student research survey. Tap what you think, then see the explanation.</p>
+      <p class="lede">Pick a level, then tap what you think for each of 8 statements. See the explanation as you go, and your score as a percentage at the end.</p>
     </div>
     <div class="quiz-card" id="quiz-app" style="max-width:680px; margin:0 auto;"></div>
   </div>
 </section>
 
 <script>
-  window.QUIZ_DATA = [
-    {
-      statement: "Severe period pain that makes you miss school is normal.",
-      options: ["Myth", "Fact"],
-      answer: 0,
-      explanation: "Myth. Pain that disrupts your daily life isn't something to just tolerate — it's worth mentioning to a doctor or nurse."
-    },
-    {
-      statement: "Teenagers can develop endometriosis.",
-      options: ["Myth", "Fact"],
-      answer: 1,
-      explanation: "Fact. Symptoms often begin in adolescence, sometimes soon after a first period."
-    },
-    {
-      statement: "PMOS only affects fertility.",
-      options: ["Myth", "Fact"],
-      answer: 0,
-      explanation: "Myth. PMOS (formerly known as PCOS) can also affect hormones, weight, skin, insulin resistance, and mental health."
-    },
-    {
-      statement: "Fibroids are cancerous tumors.",
-      options: ["Myth", "Fact"],
-      answer: 0,
-      explanation: "Myth. They are non-cancerous growths."
-    },
-    {
-      statement: "Not everyone with endometriosis has the same symptoms.",
-      options: ["Myth", "Fact"],
-      answer: 1,
-      explanation: "Fact. Endometriosis looks different for different people — there's no single required symptom."
-    },
-    {
-      statement: "Heavy bleeding that lasts more than seven days should be discussed with a healthcare provider.",
-      options: ["Myth", "Fact"],
-      answer: 1,
-      explanation: "Fact. Period bleeding lasting longer than seven days is a sign worth bringing to a doctor."
-    },
-    {
-      statement: "Only adults get reproductive health conditions.",
-      options: ["Myth", "Fact"],
-      answer: 0,
-      explanation: "Myth. Many conditions begin during adolescence."
-    },
-    {
-      statement: "Black and racialized girls are more likely to experience delayed diagnosis because of systemic barriers in healthcare.",
-      options: ["Myth", "Fact"],
-      answer: 1,
-      explanation: "Fact. Research has shown that systemic racism, gender bias, and ageism can contribute to delayed diagnosis and treatment."
-    }
-  ];
+  window.QUIZ_DATA = {
+    easy: [
+      {
+        statement: "Periods are a normal, healthy part of many people's lives.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Having a period is a normal part of reproductive health for many people."
+      },
+      {
+        statement: "Only adults get reproductive health conditions.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Many reproductive health conditions begin during the teenage years."
+      },
+      {
+        statement: "It's okay to ask a school nurse or doctor questions about your body.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. No question about your own body is too small or embarrassing to ask a trusted adult or provider."
+      },
+      {
+        statement: "Reproductive illnesses like endometriosis are contagious.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Endometriosis and similar conditions aren't caused by germs and can't spread between people."
+      },
+      {
+        statement: "Rest and a heating pad can help with mild period cramps.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Heat and rest are common, simple ways to ease mild cramping."
+      },
+      {
+        statement: "Every person's period looks and feels exactly the same.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Periods vary a lot from person to person, and cycle to cycle."
+      },
+      {
+        statement: "Teachers and school nurses can help if you're in pain at school.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. School staff are there to help, and a private conversation is always an option."
+      },
+      {
+        statement: "You should never tell a trusted adult if something feels wrong with your body.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Telling a trusted adult is exactly the right move if something feels off."
+      }
+    ],
+    medium: [
+      {
+        statement: "Severe period pain that makes you miss school is normal.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Pain that disrupts your daily life isn't something to just tolerate, it's worth mentioning to a doctor or nurse."
+      },
+      {
+        statement: "Teenagers can develop endometriosis.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Symptoms often begin in adolescence, sometimes soon after a first period."
+      },
+      {
+        statement: "PCOS only affects fertility.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. PCOS can also affect hormones, weight, skin, insulin resistance, and mental health."
+      },
+      {
+        statement: "Fibroids are cancerous tumors.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. They are non-cancerous growths."
+      },
+      {
+        statement: "Not everyone with endometriosis has the same symptoms.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Endometriosis looks different for different people, there's no single required symptom."
+      },
+      {
+        statement: "Heavy bleeding that lasts more than seven days should be discussed with a healthcare provider.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Period bleeding lasting longer than seven days is a sign worth bringing to a doctor."
+      },
+      {
+        statement: "Only adults get reproductive health conditions.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Many conditions begin during adolescence."
+      },
+      {
+        statement: "Black and racialized girls are more likely to experience delayed diagnosis because of systemic barriers in healthcare.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Research has shown that systemic racism, gender bias, and ageism can contribute to delayed diagnosis and treatment."
+      }
+    ],
+    hard: [
+      {
+        statement: "Laparoscopy is currently the only way to confirm an endometriosis diagnosis with full certainty.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Imaging and symptoms can point strongly toward endometriosis, but laparoscopic surgery is the only fully certain diagnostic method."
+      },
+      {
+        statement: "Hormonal birth control is a cure for endometriosis.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Hormonal birth control can manage endometriosis symptoms, but it doesn't cure the underlying condition."
+      },
+      {
+        statement: "Adenomyosis and endometriosis are the exact same condition.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. They're related but different: adenomyosis is tissue growing into the uterine muscle wall, while endometriosis grows outside the uterus."
+      },
+      {
+        statement: "PMDD can be confirmed with a single blood test.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. PMDD is diagnosed by tracking symptoms across several menstrual cycles, not a single test."
+      },
+      {
+        statement: "A hysterectomy can effectively cure adenomyosis.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. Because adenomyosis is confined to the uterus, removing the uterus resolves it, unlike endometriosis, which can exist outside the uterus."
+      },
+      {
+        statement: "A hysterectomy is a guaranteed cure for endometriosis.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Endometriosis tissue can exist outside the uterus, so removing the uterus doesn't guarantee it's gone."
+      },
+      {
+        statement: "GnRH agonists work by pausing ovulation and lowering estrogen levels.",
+        options: ["Myth", "Fact"],
+        answer: 1,
+        explanation: "Fact. This class of medication temporarily lowers estrogen, which can help slow the growth of endometriosis tissue."
+      },
+      {
+        statement: "Collecting race-based healthcare data has no real effect on how quickly patients get diagnosed.",
+        options: ["Myth", "Fact"],
+        answer: 0,
+        explanation: "Myth. Research suggests that a lack of race-based data helps hide diagnostic gaps, better data collection is linked to identifying and closing them."
+      }
+    ]
+  };
 </script>
 
-<!-- CHECKLIST -->
-<section class="section" id="checklist">
-  <div class="wrap two-col">
-    <div>
-      <span class="num">02</span>
-      <h2 style="margin-top:14px;">Symptom awareness checklist.</h2>
-      <p class="lede" style="margin-top:18px;">Check anything that's applied to you in the last few months. You'll get a plain-language read on whether it's worth a conversation — not a diagnosis.</p>
-    </div>
-    <form class="card" id="score-checklist">
-      <div class="checklist">
-        <label class="check-row"><input type="checkbox"> Period pain that stops me from attending school</label>
-        <label class="check-row"><input type="checkbox"> Heavy bleeding</label>
-        <label class="check-row"><input type="checkbox"> Bleeding longer than 7 days</label>
-        <label class="check-row"><input type="checkbox"> Irregular or missing periods</label>
-        <label class="check-row"><input type="checkbox"> Pelvic pain between periods</label>
-        <label class="check-row"><input type="checkbox"> Pain during bowel movements</label>
-        <label class="check-row"><input type="checkbox"> Pain during urination during my period</label>
-        <label class="check-row"><input type="checkbox"> Acne that won't improve</label>
-        <label class="check-row"><input type="checkbox"> Excess facial or body hair</label>
-        <label class="check-row"><input type="checkbox"> Hair thinning</label>
-        <label class="check-row"><input type="checkbox"> Difficulty losing weight</label>
-        <label class="check-row"><input type="checkbox"> Constant fatigue</label>
-        <label class="check-row"><input type="checkbox"> Anxiety or low mood related to symptoms</label>
-      </div>
-      <button type="submit" class="btn btn-primary" style="margin-top:24px;">See what this means <span class="btn-arrow">→</span></button>
-      <div class="score-result" id="score-result"></div>
-    </form>
-  </div>
-</section>
+
 
 <!-- REFLECTION -->
-<section class="section light">
+<section class="section">
   <div class="wrap">
     <div class="section-head">
       <div>
@@ -165,11 +239,11 @@
 </section>
 
 <!-- POLLS -->
-<section class="section" id="polls">
+<section class="section light" id="polls">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="num">03</span>
+        <span class="num">02</span>
         <h2 style="margin-top:14px;">Quick polls.</h2>
       </div>
       <p class="lede">Cast a vote and see how the room leans. (Results are saved to this device only — this is a prototype, not a live shared poll.)</p>
@@ -243,25 +317,25 @@
 </section>
 
 <!-- MATCH THE SYMPTOM GAME -->
-<section class="section light" id="game">
+<section class="section" id="game">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="num">04</span>
+        <span class="num">03</span>
         <h2 style="margin-top:14px;">Match the symptom.</h2>
       </div>
-      <p class="lede">Click a symptom, then click the condition it belongs to. This is one game from the full library planned for this page — crosswords, word searches, and a memory game are coming as the project grows.</p>
+      <p class="lede">Choose a condition for each symptom below, then check your answers all at once. This is one game from the full library planned for this page, crosswords, word searches, and a memory game are coming as the project grows.</p>
     </div>
     <div class="quiz-card" id="match-game" style="max-width:760px; margin:0 auto;"></div>
   </div>
 </section>
 
 <!-- VIDEOS & INFOGRAPHICS -->
-<section class="section" id="media">
+<section class="section light" id="media">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="num">05</span>
+        <span class="num">04</span>
         <h2 style="margin-top:14px;">Videos & infographics.</h2>
       </div>
       <p class="lede">Placeholder slots for the visual explainers this section will hold — swap these for real video embeds and downloadable infographics as they're produced.</p>
@@ -283,6 +357,36 @@
         <p>Printable one-pager for classrooms — coming soon.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="section" id="checklist">
+  <div class="wrap two-col">
+    <div>
+      <span class="num">05</span>
+      <h2 style="margin-top:14px;">Symptom awareness checklist.</h2>
+      <p class="lede" style="margin-top:18px;">Check anything that's applied to you in the last few months. You'll get a plain-language read on whether it's worth a conversation — not a diagnosis.</p>
+    </div>
+    <form class="card" id="score-checklist">
+      <div class="checklist">
+        <label class="check-row"><input type="checkbox"> Period pain that stops me from attending school</label>
+        <label class="check-row"><input type="checkbox"> Heavy bleeding</label>
+        <label class="check-row"><input type="checkbox"> Bleeding longer than 7 days</label>
+        <label class="check-row"><input type="checkbox"> Irregular or missing periods</label>
+        <label class="check-row"><input type="checkbox"> Pelvic pain between periods</label>
+        <label class="check-row"><input type="checkbox"> Pain during bowel movements</label>
+        <label class="check-row"><input type="checkbox"> Pain during urination during my period</label>
+        <label class="check-row"><input type="checkbox"> Acne that won't improve</label>
+        <label class="check-row"><input type="checkbox"> Excess facial or body hair</label>
+        <label class="check-row"><input type="checkbox"> Hair thinning</label>
+        <label class="check-row"><input type="checkbox"> Difficulty losing weight</label>
+        <label class="check-row"><input type="checkbox"> Constant fatigue</label>
+        <label class="check-row"><input type="checkbox"> Anxiety or low mood related to symptoms</label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top:24px;">See what this means <span class="btn-arrow">→</span></button>
+      <div class="score-result" id="score-result"></div>
+    </form>
   </div>
 </section>
 
